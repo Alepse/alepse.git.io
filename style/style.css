@@ -299,11 +299,17 @@ header{
   gap: 2rem;
   position: relative;
   background-position: 400px;
-  padding: 50px;
-  grid-auto-flow: column ;
+  padding: 40px;
+  grid-auto-flow: column;
+  background-color: #1d1717;
 
-  
 
+
+}
+.aboutme{
+  background-color: white;
+  padding-bottom: 20px;
+  border-radius: 50px;
 }
 .aboutpic{
   height: 400px;
@@ -318,9 +324,6 @@ header{
 .skills{
   text-align: center;
 }
-.about-data .future{
-  color: #ffffff;
-}
 .about-text{
   font-weight: 500;
   font-size: 1.1rem;
@@ -328,6 +331,7 @@ header{
   margin-top: 1.75rem;
   display: flex;
   flex-direction: column;
+  color: #ececec;
  
 }
 
@@ -468,6 +472,7 @@ header{
 	max-width: 1200px;
 	margin: auto;
 	padding: 0 70px;
+  
 }
 
 .gallery-section h1
