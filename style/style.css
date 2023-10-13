@@ -13,7 +13,9 @@
 body{
   color: #1d1717;
   background: linear-gradient(to top, #d8d8d8 0%, #050505 100%) fixed;
+  
 }
+
 img{
   width: 100%;
 }
@@ -24,9 +26,58 @@ li{
   list-style: none;
 }
 .container{
-  max-width: 1000px;
+  max-width: 100%;
   margin: auto;
-  width: 100%;
+  
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(0, 0, 0);
+}
+@media(max-width:768px){
+  .hamburger{
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar{
+    position: fixed;
+    right: -100%;
+    top: 61px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #fdfdfd;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-link{
+    margin: 111px 0;
+  }
+  .navbar.active{
+    right: 0;
+  }
+
+       
 }
 /* Header */
 header{
@@ -42,11 +93,13 @@ header{
    align-items: center;
    justify-content: space-between;
    padding: 12px 1;
+   margin-right: 10%;
 }
 .logo{
    font-size: 2.5rem;
    font-weight: 900;
    color: #020202;
+   margin-left: 10%;
 }
 
 .navbar{
@@ -61,6 +114,7 @@ header{
   padding: 4px 8px;
   border-radius: 0.2rem;
   color: #000000;
+  text-transform: uppercase;
 }
 .nav-link:hover{
   color: #f2f2f2;
@@ -88,6 +142,8 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10%;
+  padding-top: 50px;
 }
 .home-img{
   width: 180px;
@@ -132,6 +188,7 @@ header{
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 30%;
 }
 .home-text h3{
   position: relative;
@@ -215,7 +272,31 @@ header{
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 50%;
+  margin-bottom: 2rem;
+}
+.heading1{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 9%;
+  margin-bottom: 2rem;
+}
+.heading2{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 9%;
+  margin-bottom: 2rem;
+}
+.heading3{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 7%;
   margin-bottom: 2rem;
 }
 .project {
@@ -226,7 +307,9 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  padding-top: 3%;
+  text-transform: uppercase;
+    
  
 
 }
@@ -239,7 +322,7 @@ header{
   align-items: center;
   padding: 1rem;
   border-radius: 40px;
-  width: 100%;
+
   
 }
 .portfolio-box{
@@ -295,26 +378,24 @@ header{
 
 /* About */
 .about-content{
-  display: grid;
+  display: flex;
   gap: 2rem;
   position: relative;
-  background-position: 400px;
   padding: 40px;
-  grid-auto-flow: column;
   background-color: #1d1717;
-
-
-
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
 }
 .aboutme{
-  background-color: white;
   padding-bottom: 20px;
-  border-radius: 50px;
+  
 }
 .aboutpic{
-  height: 400px;
-  width: auto;
-  border: #000000 double 6px;
+  height: 300px;
+  max-width: 100%;
+  border: #000000 double 14px;
   border-radius: 15px;
   display: flex;
 }
@@ -323,23 +404,39 @@ header{
 }
 .skills{
   text-align: center;
+  background-color: #ffffff;
+  padding-top: 2%;
+  text-transform: uppercase;
 }
 .about-text{
   font-weight: 500;
   font-size: 1.1rem;
   text-align: justify;
-  margin-top: 1.75rem;
   display: flex;
-  flex-direction: column;
   color: #ececec;
+  max-width: 800px;
  
 }
-
-.newspan span{
-  color: blue;
+.educ{
+  width: 100%;
+  background: rgb(255, 255, 255);
+  padding-bottom: 2%;
+  text-transform: uppercase;
 }
-.newspan{
- text-align: center;
+.educhead{
+  margin-top: 2%;
+  color: rgb(0, 0, 0);
+  margin-bottom: 2%;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.educborder{
+  width: 180px;
+	height: 4px;
+	background: #000000;
+	margin: 30px auto;
 }
 
 /* WEBDEV SAMPLE */
@@ -358,16 +455,18 @@ header{
 }
 
 
+
+
 /* Contact Form */
 
 .contact-container{
   display: grid;
-  margin: 1rem ;
-  flex-direction: column;
   position: relative;
   grid-auto-flow: column; 
   background-position: 400px;
- 
+  background-color: rgb(245, 245, 245);
+  padding: 40px;
+ margin-bottom: 1.5%;
 
   
 }
@@ -379,7 +478,7 @@ header{
 
 }
 .contact-form input, .contact-form textarea{
-  border: 2px rgb(248, 248, 248) solid;
+  border: 2px rgb(0, 0, 0) solid;
   font-size: 0.9rem;
   padding: 5px;
   color: #000000;
@@ -433,7 +532,7 @@ header{
   row-gap: 1.4rem;
   padding: 30px 0px ;
   flex-wrap: wrap;
-  margin-top: 22rem;
+
   background: linear-gradient(to top, #6a6a6a 0%, #fdfdfd 100%);
 }
 .footer p{
@@ -460,26 +559,23 @@ header{
 .gallery-section
 {
 	width: 100%;
-	padding: 60px 0;
+	padding-top: 20px;
   margin-top: 1%;
-  border-radius: 30px;
   background: linear-gradient(to top, #fefefe 0%, #ffffff 100%);
 }
 
 .inner-width
 {
-	width: 100%;
-	max-width: 1200px;
-	margin: auto;
-	padding: 0 70px;
-  
-}
+	max-width: 100%;
+  background-color: #191818;
+  padding: 100px;
 
+}
 .gallery-section h1
 {
 	text-align: center;
 	text-transform: uppercase;
-	color: #000000;
+	color: #fffdfd;
 }
 
 .border
@@ -489,20 +585,31 @@ header{
 	background: #000000;
 	margin: 30px auto;
 }
+.border2
+{
+	width: 180px;
+	height: 4px;
+	background: #ffffff;
+	margin: 30px auto;
+}
+
+
 
 .gallery-section .gallery
 {
 	display: flex;
 	flex-wrap: wrap-reverse;
 	justify-content: center;
+  gap: 3rem;
 }
 
 .gallery-section .image
 {
-	flex: 25%;
+	flex: 40%;
 	overflow: hidden;
 	cursor: pointer;
   border-radius: 20px;
+  border: #000000 20px solid;
 }
 .gallery-section .image img
 {
