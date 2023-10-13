@@ -272,9 +272,10 @@ header{
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
-  margin-top: 50%;
+  margin-top: 40%;
   margin-bottom: 2rem;
 }
+
 .heading1{
   font-size: 4rem;
   text-transform: uppercase;
@@ -299,6 +300,7 @@ header{
   margin-top: 7%;
   margin-bottom: 2rem;
 }
+
 .project {
   margin-bottom: 2%;
   color: rgb(0, 0, 0);
@@ -582,7 +584,7 @@ header{
 {
 	width: 180px;
 	height: 4px;
-	background: #000000;
+	background: #ffffff;
 	margin: 30px auto;
 }
 .border2
