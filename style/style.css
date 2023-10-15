@@ -499,6 +499,8 @@ header{
   background: #fcfcfc;
   color: rgb(0, 0, 0);
   cursor: pointer;
+  border: #000000 5px;
+  border-style:groove;
 }
 .contact-form .send-btn:hover{
   background: #6e6e6e;
