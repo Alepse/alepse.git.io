@@ -493,15 +493,15 @@ header{
   max-width: 100%;
   font-size: 1rem;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   padding: 5px;
-  background: #212226;
-  color: rgb(247, 247, 247);
+  background: #fcfcfc;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 .contact-form .send-btn:hover{
-  background: #fdfdff;
+  background: #6e6e6e;
   transition: 0.3s all linear;
   
 }
