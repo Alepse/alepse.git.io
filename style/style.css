@@ -497,7 +497,7 @@ header{
   text-transform: uppercase;
   padding: 5px;
   background: #212226;
-  color: rgb(85, 136, 172);
+  color: rgb(247, 247, 247);
   cursor: pointer;
 }
 .contact-form .send-btn:hover{
